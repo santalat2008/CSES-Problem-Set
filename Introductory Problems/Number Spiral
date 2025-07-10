@@ -1,0 +1,15 @@
+t = int(input())
+for _ in range(t):
+    y, x = map(int, input().split())
+    l = max(y, x)
+    if l % 2 == 0:
+        if y == l:
+            print(l * l - x + 1)
+        else:
+            print((l - 1) * (l - 1) + y)
+    else:
+        if x == l:
+            print(l * l - y + 1)
+        else:
+            print((l - 1) * (l - 1) + x)
+

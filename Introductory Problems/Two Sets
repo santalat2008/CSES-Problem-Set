@@ -1,0 +1,19 @@
+n = int(input())
+s = n * (n + 1) // 2
+
+if s % 2 != 0:
+    print("NO")
+else:
+    print("YES")
+    half = s // 2
+    a, b = [], []
+    for i in range(n, 0, -1):
+        if half >= i:
+            a.append(i)
+            half -= i
+        else:
+            b.append(i)
+    print(len(a))
+    print(*a)
+    print(len(b))
+    print(*b)

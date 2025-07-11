@@ -1,0 +1,6 @@
+n = int(input())
+p = list(map(int, input().split()))
+p.sort()
+median = p[n // 2]
+cost = sum(abs(x - median) for x in p)
+print(cost)

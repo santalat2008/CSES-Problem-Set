@@ -1,0 +1,11 @@
+n = int(input())
+m = [tuple(map(int, input().split())) for _ in range(n)]
+m.sort(key=lambda x: x[1])
+ 
+c, e = 0, 0
+for a, b in m:
+    if a >= e:
+        c += 1
+        e = b
+ 
+print(c)

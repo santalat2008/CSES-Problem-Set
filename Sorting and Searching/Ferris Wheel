@@ -1,0 +1,9 @@
+n, x = map(int, input().split())
+p = sorted(map(int, input().split()))
+i, j, ans = 0, n - 1, 0
+while i <= j:
+    if p[i] + p[j] <= x:
+        i += 1
+    j -= 1
+    ans += 1
+print(ans)

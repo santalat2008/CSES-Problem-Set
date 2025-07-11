@@ -1,0 +1,17 @@
+import sys
+from collections import defaultdict
+ 
+ 
+def main():
+    input = sys.stdin.read
+    data = input().split()
+    n = int(data[0])
+    freq = defaultdict(int)
+ 
+    for x in data[1:]:
+        freq[x] += 1
+ 
+    print(len(freq))
+ 
+ 
+main()

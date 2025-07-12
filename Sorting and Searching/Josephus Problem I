@@ -1,0 +1,10 @@
+from collections import deque
+
+n = int(input())
+q = deque(range(1, n + 1))
+ans = []
+
+while q:
+    q.append(q.popleft())  
+    ans.append(q.popleft())
+print(*ans)

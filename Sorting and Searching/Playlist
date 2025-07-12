@@ -1,0 +1,17 @@
+input()
+a = [int(x) for x in input().split()]
+l = r = 0
+s = {a[0]}
+m = 1
+while r < len(a) - 1:
+    if a[r + 1] in s:
+        s.remove(a[l])
+        if l == r:
+            r += 1
+            s.add(a[r])
+        l += 1
+    else:
+        r += 1
+        s.add(a[r])
+    m = max(m, r - l + 1)
+print(m)
